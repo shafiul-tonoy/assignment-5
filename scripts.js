@@ -1,1 +1,3 @@
-console.log("hello world");
+let mainBalance = getInnerTextValue("mainBalance");
+
+handleClickEvent("noakhaliOnClick", "noakhaliDonation", "noakhaliBalance")

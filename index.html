@@ -35,9 +35,9 @@
       };
     </script>
   </head>
-  <body class="box-border m-0 p-0">
+  <body class="box-border m-0 p-0 relative">
     <!-- header start -->
-    <header>
+    <header id="header" class="sticky top-0 z-50" >
       <!-- 1st section start-->
       <section class="bg-navBg">
         <div class="container mx-auto pt-3 pb-8">
@@ -46,14 +46,14 @@
             <!-- blog -->
             <button class="btn bg-greenBg">Blog</button>
             <!-- title -->
-            <div class="flex gap-5 items-center">
+            <div class="flex gap-3 items-center">
               <img src="./assets/logo.png" alt="logo" />
               <p class="text-lg font-bold">Donate Bangladesh</p>
             </div>
             <!-- amount -->
-            <div class="flex gap-5 items-center">
+            <div class="flex gap-1 items-center">
               <img src="./assets/coin.png" alt="logo" />
-              <p class="text-lg font-medium">5500</p>
+              <p class="text-lg font-medium"><span id="mainBalance">5500</span> BDT</p>
             </div>
             <!-- amount end -->
           </nav>
@@ -61,7 +61,7 @@
       </section>
       <!-- 1st section end -->
       <!--2nd section start  -->
-      <section class="container mx-auto pt-3 pb-2 px-2">
+      <section class="container mx-auto pt-3 pb-2 px-2 backdrop-blur-2xl">
         <div class="text-center space-x-3 lg:mt-12">
           <button class="btn btn-outline bg-greenBg">Donation</button>
           <button class="btn btn-outline">History</button>
@@ -85,7 +85,7 @@
                 class="max-w-36 bg-[#1111110D] rounded-md p-3 flex items-center gap-2 justify-center font-semibold mb-2"
               >
                 <img src="./assets/coin.png" alt="coin" />
-                <p>0 BDT</p>
+                <p> <span id="noakhaliBalance">0</span>BDT</p>
               </div>
               <h1 class="text-2xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
@@ -102,10 +102,11 @@
                 type="number"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full"
+                id="noakhaliDonation"
               />
               <br />
               <br />
-              <button class="btn bg-greenBg w-full">Donate Now</button>
+              <button class="btn bg-greenBg w-full" id="noakhaliOnClick">Donate Now</button>
             </div>
           </div>
         </div>
@@ -166,6 +167,8 @@
       </section>
     </main>
     <!-- main end -->
+    
+    
      <footer class="bg-navBg h-20">
 
      </footer>

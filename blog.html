@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--daisy UI & Tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              greenBg: "#B4F461",
+              navBg: "#F9F7F3",
+            },
+            fontFamily: {
+              lexend: ["Lexend"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="container mx-auto">
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+             <img src="./assets/logo.png" alt="">
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <a class="btn btn-ghost text-xl" href="./index.html">Donate Bangladesh</a>
+            </div>
+            <div class="navbar-end">
+              <button class="btn bg-greenBg" onclick="goHome()">Home</button>
+            </div>
+          </div>
+    </header>
+    <main >
+        <h1 class="text-6xl my-6 text-red-700"><span class="text-9xl my-6 text-orange-400">B</span >log</h1>
+        <div class="breadcrumbs text-sm my-5">
+            <ul>
+              <li><a href="./index.html">Home</a></li>              
+              <li>Blog</li>
+            </ul>
+          </div>
+      <div class="">
+        <div class="collapse collapse-arrow bg-base-200 space-y-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+
+The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each node corresponds to a part of the document (like elements, attributes, text, etc.). The DOM allows scripts (like JavaScript) to access and manipulate the content, structure, and styling of a web page dynamically.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+
+1. getElementById()         → return single element <br>
+
+
+2. getElementsByTagName() → return collection <br>
+
+
+3.  getElementsByClassName() → return collection <br>
+
+ 
+
+4. querySelector() <br>
+5. querySelectorAll()
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a technique in JavaScript that leverages the concept of event bubbling to efficiently handle events by assigning a single event listener to a parent element, rather than attaching separate event listeners to multiple child elements. When an event is triggered on a child element, it "bubbles up" to its parent elements, allowing the parent to catch the event and respond to it.
+              <br>
+              <h3 class="text-xl">Why Event Delegation is Useful:</h3>
+              <ul>
+                <li>Improved Performance</li>
+                <li>Handling Dynamic Elements</li>
+                <li>Cleaner Code</li>
+              </ul>
+
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              <h3 class="text-xl">Attribute Manipulation</h3>
+
+1. getAttribute() <br>
+2. setAttribute() <br>
+3. hasAttribute() <br>
+4. removeAttribute() <br>
+
+<h3 class="text-xl">Style Manipulation</h3>
+
+1. style property <br>
+2. cssText <br>
+3. getComputedStyle() <br>
+4. className property <br>
+5. classList property
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+        function goHome(){
+            window.location.href = "index.html"
+        }
+    </script>
+  </body>
+</html>

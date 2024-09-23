@@ -1,5 +1,3 @@
-
-
-handleClickEvent("noakhaliOnClick", "noakhaliDonation", "noakhaliBalance");
-handleClickEvent("feniOnClick", "feniDonation", "feniBalance");
-handleClickEvent("quotaOnClick", "quotaDonation", "quotaBalance");
+handleClickEvent("noakhaliOnClick", "noakhaliDonation", "noakhaliBalance", "Noakhali");
+handleClickEvent("feniOnClick", "feniDonation", "feniBalance", "Feni");
+handleClickEvent("quotaOnClick", "quotaDonation", "quotaBalance", "Quota");

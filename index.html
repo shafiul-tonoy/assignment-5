@@ -40,32 +40,31 @@
     <header id="header" class="sticky top-0 z-50">
       <!-- 1st section start-->
       <section class="bg-navBg">
-        <div class="container mx-auto pt-3 pb-8">
-          <!-- nav start -->
-          <nav class="flex justify-evenly lg:justify-between items-center">
-            <!-- blog -->
+        <div class="navbar bg-navBg container mx-auto py-10">
+          <div class="navbar-start">
             <button class="btn bg-greenBg" id="blog">Blog</button>
-            <!-- title -->
-            <div class="flex gap-3 items-center">
-              <img src="./assets/logo.png" alt="logo" />
-              <p class="text-lg font-bold">Donate Bangladesh</p>
-            </div>
-            <!-- amount -->
-            <div class="flex gap-1 items-center">
-              <img src="./assets/coin.png" alt="logo" />
-              <p class="text-lg font-medium">
-                <span id="mainBalance">5500</span> BDT
-              </p>
-            </div>
-            <!-- amount end -->
-          </nav>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <img src="./assets/logo.png" alt="" />
+            <a class="btn btn-ghost text-xl" href="./index.html"
+              >Donate Bangladesh</a
+            >
+          </div>
+          <div class="navbar-end space-x-2">
+            <img src="./assets/coin.png" alt="logo" />
+            <p class="text-lg font-medium">
+              <span id="mainBalance">5500</span> BDT
+            </p>
+          </div>
         </div>
       </section>
       <!-- 1st section end -->
       <!--2nd section start  -->
       <section class="container mx-auto pt-3 pb-2 px-2 backdrop-blur-2xl">
         <div class="text-center space-x-3 lg:mt-12">
-          <button class="btn btn-outline bg-greenBg" id="donationBtn">Donation</button>
+          <button class="btn btn-outline bg-greenBg" id="donationBtn">
+            Donation
+          </button>
           <button class="btn btn-outline" id="historyBtn">History</button>
         </div>
       </section>
@@ -80,7 +79,7 @@
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="./assets/noakhali.png"
-              class="max-w-sm rounded-lg shadow-2xl"
+              class="max-w-md rounded-lg shadow-2xl"
             />
             <div>
               <div
@@ -120,14 +119,14 @@
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="./assets/feni.png"
-              class="max-w-sm rounded-lg shadow-2xl"
+              class="max-w-md rounded-lg shadow-2xl"
             />
             <div>
               <div
                 class="max-w-36 bg-[#1111110D] rounded-md p-3 flex items-center gap-2 justify-center font-semibold mb-2"
               >
                 <img src="./assets/coin.png" alt="coin" />
-                <p> <span id="feniBalance">0</span> BDT</p>
+                <p><span id="feniBalance">0</span> BDT</p>
               </div>
               <h1 class="text-2xl font-bold">
                 Donate for Flood Relief in Feni,Bangladesh
@@ -150,7 +149,9 @@
               />
               <br />
               <br />
-              <button class="btn bg-greenBg w-full " id="feniOnClick">Donate Now</button>
+              <button class="btn bg-greenBg w-full" id="feniOnClick">
+                Donate Now
+              </button>
             </div>
           </div>
         </div>
@@ -160,7 +161,7 @@
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="./assets/quota-protest.png"
-              class="max-w-sm rounded-lg shadow-2xl"
+              class="max-w-md rounded-lg shadow-2xl"
             />
             <div>
               <div
@@ -191,7 +192,9 @@
               />
               <br />
               <br />
-              <button class="btn bg-greenBg w-full" id="quotaOnClick">Donate Now</button>
+              <button class="btn bg-greenBg w-full" id="quotaOnClick">
+                Donate Now
+              </button>
             </div>
           </div>
         </div>
@@ -216,14 +219,15 @@
         </div>
       </dialog>
       <!-- modal end -->
-       <!-- history section start -->
-       <!-- history section end -->
-        <section class="container mx-auto pt-3 pb-2 px-2" id="historySection">
-          
-        </section>
+      <!-- history section start -->
+      <!-- history section end -->
+      <section
+        class="container mx-auto pt-3 pb-2 px-2"
+        id="historySection"
+      ></section>
     </main>
     <!-- main end -->
-    
+
     <footer class="bg-navBg h-20"></footer>
     <!-- js files -->
     <script src="./utility.js"></script>

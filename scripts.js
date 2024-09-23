@@ -9,3 +9,5 @@ handleClickEvent("quotaOnClick", "quotaDonation", "quotaBalance", "Quota");
 
 toggle("historyBtn");
 toggle("donationBtn");
+
+getElement("blog").addEventListener("click", ()=>window.location.href = "faq.html")

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head >
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate-Bd</title>
@@ -19,23 +19,81 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
- <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            greenBg: '#B4F461',
-            navBg: '#F9F7F3',
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              greenBg: "#B4F461",
+              navBg: "#F9F7F3",
+            },
+            fontFamily: {
+              lexend: ["Lexend"],
+            },
           },
-          fontFamily:{
-            "lexend":["Lexend"],
-          },
-        }
-      }
-    }
-  </script>
+        },
+      };
+    </script>
   </head>
-  <body>
+  <body class="box-border m-0 p-0">
+    <!-- header start -->
+    <header>
+      <!-- 1st section start-->
+      <section class="bg-navBg">
+        <div class="container mx-auto pt-3 pb-8">
+          <!-- nav start -->
+          <nav class="flex justify-evenly lg:justify-between items-center">
+            <!-- blog -->
+            <button class="btn bg-greenBg">Blog</button>
+            <!-- title -->
+            <div class="flex gap-5">
+              <img src="./assets/coin.png" alt="logo" />
+              <p class="text-lg font-bold">Donate Bangladesh</p>
+            </div>
+            <!-- amount -->
+            <div class="flex gap-5 items-center">
+              <img src="./assets/logo.png" alt="logo" />
+              <p class="text-lg font-medium">5500</p>
+            </div>
+            <!-- amount end -->
+          </nav>
+        </div>
+      </section>
+      <!-- 1st section end -->
+      <!--2nd section start  -->
+      <section class="container mx-auto pt-3 pb-2 px-2">
+          <div class="text-center space-x-3 lg:mt-12">
+            <button class="btn btn-outline bg-greenBg">Donation</button>
+            <button class="btn btn-outline">History</button>
+          </div>
+      </section>
+      <!--2nd section end  -->
+    </header>
+    <!-- header end -->
+     <!-- main start -->
+      <main>
+        
+        <section class="container mx-auto pt-3 pb-2 px-2">
+          <!-- 1st card -->
+          <div class="hero rounded-lg border">
+            <div class="hero-content flex-col lg:flex-row">
+              <img
+                src="./assets/noakhali.png"
+                class="max-w-sm rounded-lg shadow-2xl" />
+              <div>
+                <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="py-6">
+                  The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                </p>
+                <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br> <br>
+                <button class="btn bg-greenBg w-full">Donate Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- 1st card end -->
+        </section> 
+      </main>
+     <!-- main end -->
     <!-- js files -->
     <script src="./utility.js"></script>
     <script src="./scripts.js"></script>

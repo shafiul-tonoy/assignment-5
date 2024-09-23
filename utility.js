@@ -2,17 +2,34 @@ let getElement = (id) => document.getElementById(id);
 
 let getValue = (id) => parseFloat(document.getElementById(id).value);
 
-let getInnerTextValue = (id) =>  parseFloat(document.getElementById(id).innerText);
+let getInnerTextValue = (id) =>
+  parseFloat(document.getElementById(id).innerText);
 
-let setValue = (id, value, para = "") =>
-  (getElement(id).innerContent = value + para);
+let setTextValue = (id, value) => (getElement(id).innerText = value);
 
-function handleClickEvent(elementId, amountID ,balanceId) {
-  getElement(elementId).addEventListener("click",()=>{
-    let amount = getValue(amountID); 
-    let balance = getInnerTextValue(balanceId);   
+let setInputValue = (id, value) => (getElement(id).value = value);
 
-    console.log(amount, balance);
-    
+let mainBalance = getInnerTextValue("mainBalance");
+
+function handleClickEvent(elementId, amountID, balanceId) {
+  getElement(elementId).addEventListener("click", () => {
+    let amount = getValue(amountID);
+    let balance = getInnerTextValue(balanceId);
+    if (isNaN(amount) || amount <= 0) {
+      alert("Enter Valid number");
+      setInputValue(amountID, "");
+    } else {
+      if (mainBalance < amount) {
+        alert("insufficient balance");
+        setInputValue(amountID, "");
+        return;
+      }
+      balance += amount;
+      mainBalance -= amount;
+      setTextValue("mainBalance", mainBalance);
+      setTextValue(balanceId, balance);
+      setInputValue(amountID, "");
+      my_modal_5.showModal();
+    }
   });
 }
